@@ -3,4 +3,5 @@ uvicorn
 stripe
 sqlalchemy          # if you're using SQLAlchemy (most common)
 pymysql             # if you're using pymysql to connect to MySQL
-python-dotenv       # if you're using .env files
+python-dotenv   # if you're using .env files
+mysql-connector-python 
