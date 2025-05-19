@@ -8,7 +8,7 @@ function CategoriesPage() {
   const { customerId } = useCustomer();
   useEffect(() => {
     axios
-      .get("http://localhost:8000/categories")
+      .get("https://grocery-k9j1.onrender.com/categories")
       .then((response) => {
         setCategories(response.data.categories);
         console.log("API response:", response.data.categories);

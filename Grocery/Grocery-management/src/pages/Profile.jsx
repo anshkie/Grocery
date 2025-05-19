@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 const id = localStorage.getItem("customerId");
-const API_URL = `http://localhost:8000/customer/profile/${id}`; // Adjust as needed
+const API_URL = `https://grocery-k9j1.onrender.com/customer/profile/${id}`; // Adjust as needed
 
 export default function Profile() {
     const [profile, setProfile] = useState({

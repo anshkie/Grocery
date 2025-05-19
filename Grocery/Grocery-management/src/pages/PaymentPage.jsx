@@ -13,7 +13,7 @@ const PaymentPage = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:8000/create-intent', {
+    fetch('https://grocery-k9j1.onrender.com/create-intent', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

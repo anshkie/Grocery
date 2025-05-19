@@ -14,7 +14,7 @@ function CategoryProductPage() {
   const handleAddToCart = async (productId, quantity = 1) => {
     try {
       console.log({ customer_id: customerId, product_id: productId, quantity });
-      const response = await axios.post("http://localhost:8000/cart/add", {
+      const response = await axios.post("https://grocery-k9j1.onrender.com/cart/add", {
         customer_id: parseInt(customerId),
         product_id: productId,
         quantity: quantity,
@@ -27,7 +27,7 @@ function CategoryProductPage() {
   };
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/categories/${id}/products`)
+    axios.get(`https://grocery-k9j1.onrender.com/categories/${id}/products`)
       .then(res => {
         setProducts(Array.isArray(res.data.products) ? res.data.products : []);
       })

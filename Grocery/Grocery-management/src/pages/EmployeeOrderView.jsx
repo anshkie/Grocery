@@ -8,7 +8,7 @@ export default function EmployeeOrderView() {
   const fetchOrders = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:8000/orders");
+      const res = await axios.get("https://grocery-k9j1.onrender.com/orders");
       setOrders(res.data);
     } catch (err) {
       console.error("Failed to fetch orders", err);
@@ -19,7 +19,7 @@ export default function EmployeeOrderView() {
 
   const markAsCompleted = async (orderId) => {
     try {
-      await axios.put(`http://localhost:8000/orders/${orderId}/complete`);
+      await axios.put(`https://grocery-k9j1.onrender.com/orders/${orderId}/complete`);
       fetchOrders(); // Refresh orders
     } catch (err) {
       console.error("Failed to update order status", err);

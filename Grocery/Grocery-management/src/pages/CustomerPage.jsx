@@ -32,7 +32,7 @@ export default function CustomerPage() {
   const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const response = await axios.post("http://localhost:8000/customers/add", formData);
+    const response = await axios.post("https://grocery-k9j1.onrender.com/customers/add", formData);
     alert(response.data.message);  // Show success message
     const customerID = response.data.CustomerID;
 setCustomerId(customerID);

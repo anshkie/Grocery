@@ -11,7 +11,7 @@ const CartPage = () => {
   useEffect(() => {
   const fetchCart = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/cart/${id}`);
+      const response = await axios.get(`https://grocery-k9j1.onrender.com/cart/${id}`);
       setCartItems(response.data.cart);
       setOrderId(response.data.order_id);  // <-- Save it for later
       console.log(response.data.order_id)
